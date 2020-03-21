@@ -1,10 +1,10 @@
 import React from 'react';
-import exEdit from '../component/exEdit';
+import Edit from '../component/exEdit';
 
 const Top = () => {
   return (
     <div>
-      <exEdit/>
+      <Edit/>
     </div>
   )
 }
