@@ -1,14 +1,20 @@
 import React from 'react';
 import 'github-markdown-css';
+import remark2react from 'remark-react';
 
 const remark = require('remark');
-const reactRenderer = require('remark-react');
+const remarkReact = require('remark-react');
 
 const Preview = props => {
   return (
-    <article className={"markdown-body"} style={props.style}>
-      {remark().use(reactRenderer, { sanitize: false, }).processSync(props.text).contents}
-    </article>
+    <div className={"markdown-body"} style={props.style}>
+      {
+        remark()
+          .use(remarkReact, { sanitize: false, })
+          .use(remark2react)
+          .processSync(props.text).contents
+      }
+    </div>
   )
 };
 

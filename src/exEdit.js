@@ -1,6 +1,6 @@
 import React from 'react';
-import TextArea from './Textarea';
-import Preview from './Preview';
+import TextArea from './component/Textarea';
+import Preview from './component/Preview';
 
 const containerStyle = {
   display: "flex",

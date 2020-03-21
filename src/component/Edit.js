@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import TextArea from './Textarea';
+import Textarea from './Textarea';
 import Preview from './Preview';
 
 const containerStyle = {
   display: "flex",
+  justifyContent: "space-evenly"
 };
 
 const boxStyle = {
@@ -15,13 +16,16 @@ const boxStyle = {
 const Edit = () => {
   const [text, setState] = useState('# h1');
 
-  const handleChange = event => {
-    setState(event.target.value);
+  const handleChange = e => {
+    setState(e.target.value);
   };
 
   return (
     <div style={containerStyle}>
-      <TextArea handleChange={handleChange} value={text} style={{...boxStyle, fontSize: "25px"}}/>
+      <Textarea handleChange={handleChange} 
+                value={text} 
+                style={{...boxStyle, fontSize: "30px"}}
+      />
       <Preview text={text} style={boxStyle}/>
     </div>
   )

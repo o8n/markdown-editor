@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TextArea = props => {
+const Textarea = props => {
     return (
       <textarea onChange={props.handleChange} value={props.value} style={props.style}/>
     )
 };
 
-export default TextArea;
+export default Textarea;

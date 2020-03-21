@@ -1,5 +1,5 @@
 import React from 'react';
-import Edit from '../component/exEdit';
+import Edit from '../component/Edit';
 
 const Top = () => {
   return (
