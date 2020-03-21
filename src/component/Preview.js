@@ -2,7 +2,7 @@ import React from 'react';
 import 'github-markdown-css';
 import remarkRenderer from 'remark-react';
 import RemarkLowlight from 'remark-react-lowlight';
-import js from 'highlight.js/lib/languages/javascript';
+import hljs from 'highlight.js';
 
 const remark = require('remark');
 const remarkReact = require('remark-react');
@@ -17,7 +17,7 @@ const Preview = props => {
             prefix: 'md-',
             remarkReactComponents: {
               code: RemarkLowlight({
-                js
+                hljs
               })
             }
           })
